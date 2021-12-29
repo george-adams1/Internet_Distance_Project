@@ -26,9 +26,15 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 
 
     // need to use Geolocation Data
-    $(document).ready(function() {
+     $(document).ready(function() {
         // all custom jQuery will go here
+        console.log("DOCU EXE")
     });
+
+    $.get('https://ipinfo.io/json?d06fb76a59e1a7', function(data) {
+        console.log("Res", data)
+    }) 
+
 
     var apiCall = "http://nominatim.openstreetmap.org/reverse?json_callback=cb&format=json&lat=-23.56320001&lon=-46.66140002&zoom=27&addressdetails=1";
 
