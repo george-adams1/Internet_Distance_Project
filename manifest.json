@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Plugin2",
+    "description": "Description1",
+    "version": "0.1",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/icon.jpg",
+            "32": "/images/icon.jpg",
+            "48": "/images/icon.jpg",
+            "128": "/images/icon.jpg"
+          }
+    },
+    "options_page": "options.html"
+}
