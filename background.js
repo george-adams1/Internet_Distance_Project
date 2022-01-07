@@ -12,7 +12,6 @@ chrome.runtime.onInstalled.addListener(({ reason, version }) => {
   chrome.tabs.onUpdated.addListener(function (id, info, tab) {
     if (tab.status === 'loading') {
 
-
       fetch("https://ipinfo.io/json?d06fb76a59e1a7")
     .then((res) => res.json())
     .then((data) => {

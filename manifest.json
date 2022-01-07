@@ -6,8 +6,23 @@
     "permissions": [
         "storage",
         "activeTab",
-        "scripting"
+        "scripting",
+        "declarativeNetRequest"
     ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "declarative_net_request" : {
+        "rule_resources" : [{
+          "id": "ruleset_1",
+          "enabled": true,
+          "path": "rules_1.json"
+        }, {
+          "id": "ruleset_2",
+          "enabled": false,
+          "path": "rules_2.json"
+        }]
+      },
     "background": {
         "service_worker": "background.js"
     },
